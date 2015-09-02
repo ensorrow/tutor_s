@@ -1,0 +1,50 @@
+#main_wrapper{
+	width: 100%;
+}
+#main_wrapper::after,#main_wrapper li::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+#draw_line{
+	width: 10px;
+	position: absolute;
+	left: 30%;
+	border-left: 1px solid #535353;
+}
+#main_wrapper li{
+	height: 100%;
+}
+.comment_time{
+	width: 30%;
+	float: left;
+	text-align: center;
+	height: 100%;
+	font-size: 0.8em;
+}
+.comments{
+	width: 47%;
+	float: left;
+	padding: 0.8em;
+	background: #fff;
+	color: #2c3e50;
+	margin: 1em 1.5em;
+	line-height: 1.4em;
+	position: relative;
+}
+.comments::before{
+	content: '';
+	width: 31px;
+	height: 28px;
+	background: url(../images/arrow.gif);
+	background-size: cover;
+	position: absolute;
+	left: -30px;
+	top: 50%;
+	margin-top: -14px;
+	text-align: center;
+}
+.user_name{
+	font-size: 0.5em;
+	float: right;
+}

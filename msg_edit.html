@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+	<title>信息修改</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/navi.css">
+	<link rel="stylesheet" href="css/msg_edit.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.flatui.min.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	</style>
+</head>
+<body data-role="page">
+	<header data-role="header">
+		<a href="#" data-rel="back" data-icon="carat-l">后退</a>
+		<h1>信息修改</h1>
+	</header>
+	<div>
+		<ul class="edit_card" id="cm0">
+			<li>
+				用户名：<span>18292876059</span>
+			</li>
+			<li data-role="fieldcontain" id="gender">
+				<legend>选择性别：</legend>
+				<label for="man">男</label>
+				<input type="radio" id="man" name="gender">
+				<label for="woman">女</label>
+				<input type="radio" id="woman" name="gender">
+			</li>
+			<li data-role="fieldcontain">
+				<legend>选择分科：</legend>
+				<label for="like">理科</label>
+				<input type="radio" id="like" name="type">
+				<label for="wenke">文科</label>
+				<input type="radio" id="wenke" name="type">
+				<label for="tongkao">统考</label>
+				<input type="radio" id="tongkao" name="type">
+			</li>
+		</ul>
+		<ul class="edit_card" id="cm1">
+			<li data-role="fieldcontain">
+				<select id="selectPart">
+					<option value="-1">请选择学校所在区</option>
+				</select>
+				<select id="selectCity">
+					<option value="-1">请选择学校</option>
+				</select>
+			</li>
+			<li data-role="fieldcontain">
+				<label for="grade_sel">选择年级：</label>
+				<select id="grade_sel">
+					<option>小学一年级</option>
+					<option>小学二年级</option>
+					<option>小学三年级</option>
+					<option>小学四年级</option>
+					<option>小学五年级</option>
+					<option>小学六年级</option>
+					<option>初中一年级</option>
+					<option>初中二年级</option>
+					<option>初中三年级</option>
+					<option>高中一年级</option>
+					<option>高中二年级</option>
+					<option>高中三年级</option>
+				</select>
+			</li>
+			<li data-role="fieldcontain">
+				<label for="contactWay">联系方式：</label>
+				<input type="text" id="contactWay" placeholder="填写手机座机均可">
+			</li>
+			<li data-role="fieldcontain">
+				<select id="selectPart2">
+					<option value="-1">请选择所在区</option>
+				</select>
+				<select id="selectStreet">
+					<option value="-1">请选择街道</option>
+				</select>
+			</li>			
+		</ul>
+		<input type="submit" value="提交" data-role="none" class="mySub">
+	</div>
+	<div id="footer_fix"></div>
+	<footer>
+		<ul>
+			<li><a href="list1.html" id="nav_btn1" rel="external">首页</a></li>
+			<li><a href="myclass.html" id="nav_btn2" rel="external">已购课程</a></li>
+			<li class="nav_active"><a href="stu_form.html" id="nav_btn3" rel="external">我的</a></li>
+			<div style="clear:both;"></div>
+		</ul>
+	</footer>
+</body>
+<script type="text/javascript" src="school_list.js"></script>
+<script type="text/javascript">
+	$(document).on("pageinit", function() {  
+    // 填充省下拉列表  
+    var firstOptionHtml = "";  
+    var first = [];  
+    for(var el in provinceAndCityArray) {  
+        first.push(provinceAndCityArray[el].name);  
+        firstOptionHtml += "<option value=" + el + ">" + provinceAndCityArray[el].name + "</option>";  
+    }  
+    $("#selectPart,#selectPart2").append(firstOptionHtml);  
+
+    // 填充城市下拉列表  
+	function fullfill(part,street){
+	    $("#selectPart").bind("change", function() {  
+	        var selectedProvince = $("#selectPart :selected").val();  
+	        if(selectedProvince != -1) {  
+	            var citiesOptionHtml = "";  
+	            var cities = [];  
+	            cities = provinceAndCityArray[selectedProvince].cities;  
+	            for(var elCity in cities) {  
+	                citiesOptionHtml += "<option value=" + elCity + ">" + cities[elCity] + "</option>";  
+	            }  
+	            // 清空之前的城市列表  
+	            $("#selectCity option[value!=-1]").remove();  
+	            $("#selectCity option[value=-1]").attr("selected", true);  
+	            $("#selectCity").append(citiesOptionHtml);  
+	            $("#selectCity").selectmenu("refresh");  
+	            $("#selectStreet option[value!=-1]").remove();  
+	            $("#selectStreet option[value=-1]").attr("selected", true);  
+	            $("#selectStreet").append(citiesOptionHtml);  
+	            $("#selectStreet").selectmenu("refresh");  
+	        }  
+	    });
+	}
+}); 
+</script>
+</html>

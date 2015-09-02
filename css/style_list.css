@@ -1,0 +1,169 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-weight: normal;
+}
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+	background: #EEE;	
+}
+header{
+	width: 100%;
+	height: 6em;
+	background: #2c3e50;
+	position: fixed;
+	z-index: 1;
+}
+header,nav,#content,#clear_fix{font-size: 68%;}
+#left_arrow{
+	display: block;
+	width: 2.6em;
+	height: 2.6em;
+	background-image: url(../images/arrow-left.png);
+	-webkit-background-size: 100%;
+	-o-background-size: 100%;
+	position: absolute;
+	left: 1em;
+	top: 1.7em;
+}
+#search_box{
+	border:2px solid #fff;
+	border-top: 0;
+	height: 2.2em;
+	width: 10.8em;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -5.9em;
+	margin-top: -1.1em;
+	background-color: transparent;
+	font-size: 1.4em;
+	color: #fff;
+	outline: none;
+}
+#plh{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 1.4em;
+	display: block;
+	color: #fff;
+	margin-top: -0.7em;
+	margin-left: -2em;
+	z-index: -1;
+}
+nav{
+	height: 2.6em;
+	line-height: 2.6em;
+	position: fixed;
+	top: 6em;
+	z-index: 10;
+	width: 100%;
+}
+nav li{
+	float: left;
+	background-color: #353F63;
+	width: 50%;
+	height: 2.6em;
+}
+nav a{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #fff!important;
+	font-size: 1.2em;
+}
+a,a:visited{
+	color: #000;
+}
+.active{
+	background: #5F6783;
+}
+#clear_fix{height: 8.6em;}
+#content li{
+	width: 100%;
+	height:10em;
+	background: #fff;
+	margin-top: 0.8em;
+	position: relative;
+}
+#content li::after{
+	content:'';
+	display: block;
+	clear: both;
+}
+.headpic{
+	width: 33%;
+	text-align: center;
+	float: left;
+	padding-top: 2em;
+}
+.headpic img{
+	width: 6em;
+}
+.btn{
+	border:0;
+	background: #16a085;
+	border-radius: 6px;
+	padding: 0.4em 0.6em;
+	color: #fff;
+	font-size: 1.2em;
+	float: right;
+	margin-right: 0.5em;
+	margin-top: 1em;
+}
+hgroup{
+	margin-top: 1em;
+	width: 67%;
+	float: left;
+}
+hgroup h1{
+	font-size: 1.4em;
+	font-family: 微软雅黑;
+	margin: 0 auto;
+	padding-right: 5px;	
+}
+.rank{
+	position: absolute;
+	right: 0.6em;
+	top: 0.95em;
+	height: 16px;
+	overflow: hidden;
+}
+.rank img{
+	width: 80px;
+}
+.rank1{
+	width: 16px;
+}
+.rank2{
+	width: 32px;
+}
+.rank3{
+	width: 48px;
+}
+.rank4{
+	width: 64px;
+}
+.rank5{
+	width: 80px;
+}
+hgroup h2,h3,h4{
+	font-size: 1.1em;
+	margin: 1.6em 0 0.5em 0;
+}
+hgroup h2 span{
+	color: #c08f19;
+}
+hgroup h4{
+	float: right;
+	margin-top: 1em;
+	margin-right: 1em;
+}
+hgroup h4 span{
+	color: #c08f19;
+}

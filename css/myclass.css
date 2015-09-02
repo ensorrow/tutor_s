@@ -1,0 +1,95 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-weight: normal;
+}
+body{
+	background: #EEE;
+}
+#main_wrapper{
+	width: 100%;
+	margin-top: 2em;
+	font-size: 68%;
+}
+#main_wrapper::after,#main_wrapper li::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+#draw_line{
+	width: 10px;
+	position: absolute;
+	left: 26%;
+	border-left:2px solid #626262;
+}
+#main_wrapper li{
+	height: 100%;
+}
+.head_pic{
+	width: 26%;
+	float: left;
+	position: relative;
+}
+.pic{
+	border: 5px solid #89a9c7;
+	border-radius: 40px;
+	background: url(../images/head.gif);/*使用时作为ID分离出来*/
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	top: 50%;
+	width: 64px;
+	height: 64px;
+	margin: 0 auto;
+	margin-top: -37px;
+	display: block;
+}
+.class_info{
+	width: 60%;
+	float: left;
+	background: #fff;
+	color: #2c3e50;
+	margin: 1em 1.5em;
+	line-height: 1.4em;
+	position: relative;
+	padding-bottom: 1em;
+	display: block;
+}
+.class_info h1{
+	font-size: 1.1em;
+	color: #eee;
+	background-color: #5b748c;
+	padding: .4em .7em;
+	margin-bottom: .9em;
+}
+.deal_time{
+	float: right;
+}
+.class_info h2{
+	line-height: 1.5em;
+	margin-left: .7em;
+	color: #535353;
+	font-size: .9em;
+}
+.class_info::before{
+	content: '';
+	width: 16px;
+	height: 0px;
+	position: absolute;
+	left: -16px;
+	top: 50%;
+	border: 1px solid #626262;
+	z-index: -1;
+}
+.sche{
+	padding: .3em .6em;
+	background-color: #32b16c;
+	color: #eee;
+	border-radius: 3px;
+	text-decoration: none;
+	display: inline-block;
+	font-size: .9em;
+	margin-left: .7em;
+}

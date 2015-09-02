@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="css/login_regis.css">
+	<link rel="stylesheet" type="text/css" href="css/navi.css">
+	<link rel="stylesheet" href="css/themes/jquery.mobile.flatui.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+</head>
+<body id="page">
+	<header data-role="header">
+		<a href="#" data-rel="back" data-icon="carat-l" id="left_arrow">后退</a>
+		<h1>登录</h1>
+		<a href="#" id="menubtn" data-role="none"></a>
+	</header>
+	<form id="loginform" role="main" class="ui-content">
+		<span id="input_wrapper">
+			<input type="text" id="username" name="username" placeholder="输入账号"><br>
+			<input type="password" id="password" name="password" placeholder="输入密码"><br>
+		</span>
+		<br>
+		<input type="submit" value="登录" id="login"><br>
+		<a href="register.html"  id="register2">快速注册</a>
+	</form>
+	<footer data-role="footer">
+		<ul>
+			<li class="nav_active"><a href="list1.html" id="nav_btn1" rel="external">首页</a></li>
+			<li><a href="myclass.html" id="nav_btn2" rel="external">已购课程</a></li>
+			<li><a href="stu_form.html" id="nav_btn3" rel="external">我的</a></li>
+			<div style="clear:both;"></div>
+		</ul>
+	</footer>
+	<div data-role="panel" id="right-panel" data-position-fixed="true" data-display="push" data-position="right">
+    	<div id="panel_head">
+    		<a href="#"><img src="images/headpic.gif"></a>
+    	</div>
+    	<div id="panel_nav">
+			<a href="login.html">登录</a>
+			<span>&nbsp/&nbsp</span>
+			<a href="register.html">注册</a>
+		</div>
+    	<div>
+    		<ul data-role="listview">
+    			<li><a href="#">年级选择</a></li>
+    			<li><a href="#">科目选择</a></li>
+    			<li><a href="#">购物车</a></li>
+    		</ul>
+    	</div>
+    </div>
+</body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	$(document).on("pagebeforecreate",function(){
+		$("input").attr('data-role','none');
+		$("footer a").attr("rel","external");		
+	});
+</script>
+<script type="text/javascript" src="js/panel.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/check.js"></script>
+</html>

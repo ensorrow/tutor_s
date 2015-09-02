@@ -1,0 +1,115 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: 微软雅黑;
+	font-weight: normal;
+	font-size: 1em;
+}
+body{
+	font-size: 100%;
+	background: #e5e5e5;
+}
+#top_bg{
+	height: 10em;
+	width: 100%;
+	background: url(../images/top_bg.jpg) no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+}
+#l_wr{
+	width: 40%;
+	margin-top: -2.8em;
+	float: left;
+	text-align: center;
+}
+#l_wr h1{
+	color: #eee;
+	margin-top: 0.4em;
+}
+#head{
+	width: 5.6em;	
+	margin-bottom: 1em;
+	position: relative;
+	z-index: 3;
+}
+header{
+	height: 7.3em;
+	width: 100%;
+	background-color: #2c3e50;
+}
+#float_button{
+	width: 3.4em;
+	height: 3.4em;
+	line-height: 3.4em;
+	border: 0;
+	border-radius: 2em;
+	background-color: #D75549;
+	color: #fff;
+	position: fixed;
+	bottom: 5em;
+	right: 1em;
+	text-decoration:none;
+	text-align: center;
+}
+header hgroup{
+	width: 60%;
+	float: left;
+}
+hgroup h1{
+	float: left;
+	font-size: 1.2em;
+	line-height: 2em;
+	margin-top: 0.5em;
+}
+hgroup h2,hgroup h3{
+	color: #eee;
+	margin-top: 0.5em;
+}
+hgroup h2{
+	line-height: 2.7em;
+	height: 2.7em;
+}
+hgroup h2 i{
+	font-style: normal;
+	text-align: center;
+	display: block;
+	width: 1.5em;
+	height:1.5em;
+	line-height: 1.5em;
+	background: #fff;
+	color: #233140;
+	border: 0;
+	border-radius: 0.8em;
+	float: left;
+	margin: 1em 0.6em 0 0;
+}
+hgroup h3{
+	margin-top: 1.5em;
+	font-size: 0.9em;
+}
+h3 #price{
+	color: #ef8787;
+}
+nav li{
+	width: 50%;
+	text-align: center;
+	float: left;
+	background: #353F63;
+	height:2em;
+	line-height: 2;
+}
+nav a{
+	text-decoration: none;
+	color: #fff;
+	display: block;
+}
+nav a:visited{color: #fff;}
+nav:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.active{
+	background: #5F6783;
+}

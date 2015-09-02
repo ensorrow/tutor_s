@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maxmum-scale=1.0">
+	<title>历史信息查询</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/history.css">
+	<link rel="stylesheet" type="text/css" href="css/navi.css">
+	<link rel="stylesheet" href="css/themes/jquery.mobile.flatui.min.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body data-role="page">
+	<header data-role="header">
+		<a href="#" data-rel="back" data-icon="carat-l">后退</a>
+		<h1>历史信息</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="stu_form.html" rel="external">基本信息</a></li>
+				<li><a href="#" class="ui-btn-active">历史信息</a></li>
+			</ul>
+		</div>
+	</header>
+	<div>
+		<div id="chart_wrap">
+			<img src="images/chart.jpg">
+		</div>		
+		<ul class="his_card" id="cm0">
+			<li>
+				累计学习时长：<span>10</span>h
+			</li>
+			<li>
+				累计结识教师：
+				<ul id="teac_name">
+					<li><a href="detail1.html" rel="external">李春雷</a></li>
+					<li><a href="detail1.html" rel="external">吴飞胡</a></li>
+					<li><a href="detail1.html" rel="external">任佳伟</a></li>
+					<div style="clear:both;"></div>
+				</ul>
+			</li>
+		</ul>		
+		<ul data-inset="true" class="his_card" id="cm1">
+			<li>
+				<p class="user_name">李春雷</p>
+				<p class="comments">老师讲的很好老师讲的很好老师讲的很好老师讲的很好</p>
+			</li>
+			<li>
+				<p class="user_name">吴飞胡</p>
+				<p class="comments">老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好</p>
+			</li>
+			<li>
+				<p class="user_name">任佳伟</p>
+				<p class="comments">老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好</p>
+			</li>
+		</ul>		
+		<ul data-inset="true" class="his_card" id="cm2">
+			<li>
+				<p class="user_name">李春雷</p>
+				<p class="comments">可造之才</p>
+			</li>
+			<li>
+				<p class="user_name">吴飞胡</p>
+				<p class="comments">清北指日可待</p>
+			</li>
+			<li>
+				<p class="user_name">任佳伟</p>
+				<p class="comments">同济建筑学也很不错！</p>
+			</li>
+		</ul>
+		<a href="#" class="ui-btn myBtn">成绩修改</a><!-- ？？ -->
+		<a href="#" class="ui-btn myBtn">查看成绩报告</a>
+	</div>
+	<div id="footer_fix"></div>
+	<footer>
+		<ul>
+			<li><a href="list1.html" id="nav_btn1" rel="external">首页</a></li>
+			<li><a href="myclass.html" id="nav_btn2" rel="external">已购课程</a></li>
+			<li class="nav_active"><a href="stu_form" id="nav_btn3" rel="external">我的</a></li>
+			<div style="clear:both;"></div>
+		</ul>
+	</footer>
+</body>
+</html>

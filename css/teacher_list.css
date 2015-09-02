@@ -1,0 +1,58 @@
+.ui-radio{
+	display: inline-block;
+}
+.tl_card{
+	overflow: visible;
+	width: 90%;
+	padding: 1.6em 0 0 0;
+	position: relative;
+	margin:3em auto;
+	background-color: #fff;
+	font-size: 80%;
+}
+.tl_card::before{
+	display: block;
+	width: 100%;
+	height:2.6em;
+	color: #fff;
+	text-align: center;
+	line-height: 2.6em;
+	background: #2C8DB3;
+	position: absolute;
+	top: -1.6em;
+}
+#cm0::before{content: '基本信息';}
+#cm1::before{content: '相关信息';}
+.tl_card ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.tl_card li{
+	margin: 0em 0.5em;
+	border-color: #999;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 0.5em;
+}
+.tl_card li span{
+	color: #000;
+}
+option{
+	font-size: 80%;
+}
+.ui-select>div>span{
+	color: #fff;
+	font-size: 80%;
+}
+#cm0::before{content: '基本信息';}
+#cm1::before{content: '教学科目';}
+.ui-checkbox{
+	margin:0.3em!important;
+	margin-left: 0!important;
+}
+.ui-checkbox label{
+	font-size: 80%!important;
+}
+.ui-radio label{
+	font-size: 80%!important;
+}

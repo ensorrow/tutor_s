@@ -1,0 +1,64 @@
+#time{
+	float: left;
+	margin-left: 1.5em;
+}
+#comment{
+	float: right;
+	margin-right: 1.5em;
+}
+#table::before,#info::before,#intro_pics::before{
+	display: block;
+	width: 100%;
+	height: 2em;
+	line-height: 2em;
+	background: #2c3e50;
+	color: #fff;
+	text-align: center;
+}
+#table::before{content: '时间表';}
+#info::before{content: '教师信息';margin-bottom: 0.5em;}
+#intro_pics::before{content: '个人展示';}
+#table{
+	width: 90%;
+	background: #fff;
+	margin:1.2em auto;
+	padding-bottom: 0.1em;
+}
+table{
+	border-collapse: collapse;
+	width: 90%;
+	margin:1.2em auto;
+}
+table tr{
+	line-height: 1.6em;
+}
+table th,table td{
+	vertical-align: middle;
+	border: 1px solid #00675C;
+	text-align: center;
+}
+#info{
+	width: 90%;
+	background: #fff;
+	margin: 0 auto;
+	padding-bottom: 1.5em;
+}
+#info li{
+	font-size: 0.9em;
+	width: 85%;
+	margin: 0 auto;
+	height:1.9em;
+}
+#intro_pics{
+	width: 90%;
+	background: #fff;
+	margin: 1.2em auto;
+	padding-bottom: 0.1em; 
+}
+#intro_pics li{
+	width: 85%;
+	margin: 1.5em auto;
+}
+#intro_pics img{
+	width: 100%;
+}
