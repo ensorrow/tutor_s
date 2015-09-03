@@ -4,9 +4,9 @@
 }
 #menubtn{
 	display: block;
-	width: 31px;
+	width: 29px;
 	height: 26px;
-	background-image: url(../images/menu1.gif);
+	background-image: url(../images/menu.gif);
 	-webkit-background-size: 100%;
 	-o-background-size: 100%;
 	position: absolute;
