@@ -14,12 +14,12 @@
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	</style>
 </head>
-<body data-role="page">
+<body data-role="page" data-theme="b">
 	<header data-role="header" id="myhead">
 		<a href="#" data-rel="back" data-icon="carat-l">后退</a>
 		<h1>信息修改</h1>
 	</header>
-	<div>
+	<div id="content">
 		<ul class="edit_card" id="cm0">
 			<li>
 				用户名：<span>18292876059</span>
@@ -27,14 +27,14 @@
 			<li data-role="fieldcontain" id="gender">
 				<legend>选择性别：</legend>
 				<label for="man">男</label>
-				<input type="radio" id="man" name="gender">
+				<input type="radio" id="man" name="gender" checked='checked'>
 				<label for="woman">女</label>
 				<input type="radio" id="woman" name="gender">
 			</li>
 			<li data-role="fieldcontain">
 				<legend>选择分科：</legend>
 				<label for="like">理科</label>
-				<input type="radio" id="like" name="type">
+				<input type="radio" id="like" name="type" checked='checked'>
 				<label for="wenke">文科</label>
 				<input type="radio" id="wenke" name="type">
 				<label for="tongkao">统考</label>
