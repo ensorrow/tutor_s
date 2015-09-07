@@ -6,12 +6,26 @@
 body{
 	background-color: #eee!important;
 }
+#myhead{
+	background: #30aaea;
+	border: 0;
+}
+#myhead .ui-btn{
+	background: rgba(0,0,0,0);
+	border: 0;
+}
+#mynav li{
+	background: #2ea4e2;
+}
+#mynav li a.ui-btn-active{
+	background: #1897d9;
+}
 .mySub{
 	text-align: center;
 	width: 80%;
 	display: block;
 	margin:2em auto;
-	background-color: #2C8DB3!important;
+	background-color: #30aaea!important;
 	border:0;
 	border-radius: 5px;
 	color: #fff;
@@ -21,9 +35,9 @@ body{
 .myBtn{
 	width: 80%;
 	margin: .5em auto!important;
-	border-width: 0px;
+	border: 0px!important;
 	border-radius: 5px;
-	background-color: #2C8DB3!important;
+	background-color: #30aaea!important;
 	font-size: 0.8em!important;
 }
 
@@ -44,7 +58,7 @@ body{
 	color: #fff;
 	text-align: center;
 	line-height: 2em;
-	background: #2C8DB3;
+	background: #30aaea;
 	position: absolute;
 	top: -1.6em;
 }

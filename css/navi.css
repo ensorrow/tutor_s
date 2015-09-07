@@ -52,7 +52,7 @@ footer a::after{
 #nav_btn3::after{
 	background-image: url(../images/bottombtn0201.png);
 }
-.nav_active #nav_btn13::after{
+.nav_active #nav_btn3::after{
 	background-image: url(../images/bottombtn0202.png);
 }
 #footer_fix{
