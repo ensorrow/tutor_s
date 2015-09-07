@@ -7,6 +7,14 @@
 body{
 	background: #EEE;
 }
+header#myhead{
+	background: #30aaea;
+	border: 0;
+}
+header#myhead .ui-btn{
+	background: rgba(0,0,0,0);
+	border: 0;
+}
 #main_wrapper{
 	width: 100%;
 	margin-top: 2em;
@@ -32,7 +40,7 @@ body{
 	position: relative;
 }
 .pic{
-	border: 5px solid #89a9c7;
+	border: 5px solid #1897d9;
 	border-radius: 40px;
 	background: url(../images/head.gif);/*使用时作为ID分离出来*/
 	background-size: 100%;
@@ -60,7 +68,7 @@ body{
 .class_info h1{
 	font-size: 1.1em;
 	color: #eee;
-	background-color: #5b748c;
+	background-color: #30aaea;
 	padding: .4em .7em;
 	margin-bottom: .9em;
 }

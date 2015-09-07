@@ -26,10 +26,14 @@ body{
 	height: 100%;
 	text-align: center;
 }
-header{
-	width: 100%;
-	background: #2c3e50;
+header#myhead{
+	background: #30aaea;
+	border: 0;
 	margin-bottom: 4.2em;
+}
+header#myhead .ui-btn{
+	background: rgba(0,0,0,0);
+	border: 0;
 }
 form{
 	font-size: .8em;
@@ -82,4 +86,7 @@ form{
 }
 #password2-error{
 	top: 5.7em;
+}
+#page footer{
+	border: 0;
 }

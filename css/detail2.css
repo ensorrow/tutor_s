@@ -22,6 +22,11 @@
 	height: 100%;
 	font-size: 0.8em;
 }
+.comment_time span{
+	padding: 6px 10px;
+	background-color: #fff;
+	border-left: 4px solid #30aaea;
+}
 .comments{
 	width: 47%;
 	float: left;

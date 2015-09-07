@@ -5,8 +5,13 @@
 	font-family: YaHei;
 	font-size: 1em;
 }
-header{
-	background: #2c3e50;
+header#myhead{
+	background: #30aaea;
+	border: 0;
+}
+header#myhead .ui-btn{
+	background: rgba(0,0,0,0);
+	border: 0;
 }
 #sub_sel{
 	width: 90%;
