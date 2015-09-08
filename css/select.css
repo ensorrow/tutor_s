@@ -110,6 +110,10 @@ table th,table td{
 	margin: 10px auto;
 	border: 0;
 }
+#clear_fix{
+	height: 3em;
+	width: 100%;
+}
 footer{
 	font-size: 1em;
 	width: 100%;
