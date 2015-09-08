@@ -142,8 +142,7 @@
 	});	
 </script>
 <script>
-	$( document ).on( "pagecreate", "#page", function() {
-
+	$( document ).on( "pageinit", "#page", function() {
 		$( document ).on( "swipeleft swiperight", "#page", function( e ) {
 			if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
 				if ( e.type === "swipeleft" ) {
