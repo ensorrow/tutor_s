@@ -81,6 +81,36 @@ table th,table td{
 	top: -1.2em;
 	left: -0.4em;
 }
+#last{
+	width: 90%;
+	background: #fff;
+	margin: 0 auto;
+	margin-top: 2.6em;
+	padding-bottom: 0.1em;
+	position: relative;
+	padding: 0.7em 0;
+	font-size: .68em;
+}
+#last::before{
+	content: '选择课时';
+	display: block;
+	width: 5em;
+	height:2.4em;
+	color: #fff;
+	text-align: center;
+	line-height: 2.4em;
+	background: #00b7ee;
+	position: absolute;
+	top: -1.2em;
+	left: -0.4em;
+}
+#last .ui-btn{
+	background-color: #1897d9;
+	font-size: 14px;
+	width: 62%;
+	margin: 10px auto;
+	border: 0;
+}
 footer{
 	font-size: 1em;
 	width: 100%;
@@ -110,7 +140,7 @@ footer #button{
 	display: block;
 	width: 20px;
 	height: 20px;
-	background: url(../images/laugh.png) no-repeat center;
+	background: url(../images/laugh_b.png) no-repeat center;
 	background-size: 100%;
 	position: relative;
 	left: 50%;
