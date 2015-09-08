@@ -61,7 +61,7 @@ table{
 	margin:1.2em auto;
 }
 table tr{
-	line-height: 1.6em;
+	line-height: 1.9em;
 }
 table th,table td{
 	vertical-align: middle;
@@ -104,4 +104,18 @@ footer #button{
 	border:0;
 	color: #fff;
 	text-decoration: none;
+}
+.tdactive:before{
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(../images/laugh.png) no-repeat center;
+	background-size: 100%;
+	position: relative;
+	left: 50%;
+	margin-left: -10px;
+}
+.tddisable{
+	background: #eee;
 }

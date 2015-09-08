@@ -13,72 +13,112 @@
 		<a href="#" data-rel="back" data-icon="carat-l">后退</a>
 		<h1>购买课时</h1>
 	</header>
-	<div id="sub_sel">
-		<form>
+	<form action="confirm.html" data-ajax="false">
+		<div id="sub_sel">
 			<input id="button11" type="checkbox" data-theme="c" data-mini="true"/>
 	        <label for="button11">大学物理<span class="price">￥120</span></label>
 	        <input id="button12" type="checkbox" data-theme="c" data-mini="true"/>
 	        <label for="button12">高等数学<span class="price">￥120</span></label>
 	         <input id="button13" type="checkbox" data-theme="c" data-mini="true"/>
 	        <label for="button13">高等数学<span class="price">￥120</span></label>
-		</form>
-	</div>
-	<div id="table">
-		<table>
-			<tbody>
-				<tr>
-					<th>上午</th>
-					<th>上午</th>
-					<th>下午</th>
-					<th>晚上</th>
-				</tr>
-				<tr>
-					<td>周一</td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>周一</td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>周一</td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>周一</td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>周一</td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>周一</td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<footer>
-		<a href="confirm.html" id="button" rel="external">立即购买</a>
-		<p>总价：  <span>￥250</span></p>
-	</footer>
+		</div>
+		<div id="table">
+			<table>
+				<tbody>
+					<tr>
+						<th></th>
+						<th>上午</th>
+						<th>下午</th>
+						<th>晚上</th>
+					</tr>
+					<tr>
+						<td>周一</td>
+						<td class="tddisable"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>周二</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>周三</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>周四</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>周五</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>周六</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>周日</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<footer>
+			<input type="submit" value="立即购买" id="button" data-role="none">
+			<p>总价：  <span>￥250</span></p>
+		</footer>
+	</form>
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
-
+	$(document).ready(function(){
+		var i,j;
+		for(i=1;i<8;i++){
+			for(j=1;j<4;j++){
+				(function(value1,value2){
+					$('tr').eq(value1).children('td').eq(value2).click(function(){
+						if(!$(this).hasClass('tddisable')){
+							if(!$(this).hasClass('tdactive')){
+								$(this).addClass('tdactive');
+							}
+							else{
+								$(this).removeClass('tdactive');
+							}
+						}
+					})
+				})(i,j);
+			}
+		}
+		$('footer #button').click(function(){
+			var m,n;
+			var str='';
+			for(m=1;m<8;m++){
+				for(n=1;n<4;n++){
+					(function(value1,value2){
+						if($('tr').eq(value1).children('td').eq(value2).hasClass('tdactive')){
+							str+=value1;
+							str+=value2;
+						}
+					})(m,n);
+				}
+			}
+			alert(str);
+			//点击提交后会产生独一无二的数据，数据怎么用我就不知道了。。
+		})
+	})
 </script>
 <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </html>
