@@ -5,10 +5,13 @@
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 	<title>教师列表</title>
 	<link rel="stylesheet" type="text/css" href="css/style_list.css">
-	<link rel="stylesheet" type="text/css" href="css/navi.css">
 	<link rel="stylesheet" href="css/themes/jquery.mobile.flatui.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
 	<link rel="stylesheet" type="text/css" href="css/panel.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/panel.js"></script>	
+	<script type="text/javascript" src="js/placeholder.js"></script>
 </head>
 <body>
 	<div data-role="page" id="page">
@@ -16,7 +19,7 @@
 			<a href="#" data-rel="back" id="left_arrow"></a>
 			<input type="text" id="search_box">
 			<span id="plh">搜索老师</span>
-			<a href="#" id="menubtn"></a>
+			<a href="#right-panel" id="menubtn1"></a>
 		</header>
 		<div id="clear_fix"></div>
 		<nav>
@@ -105,15 +108,6 @@
 				</a>
 			</ul>
 		</div>
-		<div id="footer_fix"></div>
-		<footer>
-			<ul>
-				<li class="nav_active"><a href="list1.html" id="nav_btn1" rel="external">首页</a></li>
-				<li><a href="myclass.html" id="nav_btn2" rel="external">已购课程</a></li>
-				<li><a href="stu_form.html" id="nav_btn3" rel="external">我的</a></li>
-				<div style="clear:both;"></div>
-			</ul>
-		</footer>
 		<div data-role="panel" id="right-panel" data-position-fixed="true" data-display="push" data-position="right">
 	    	<div id="panel_head">
 	    		<a href="#"><img src="images/headpic.gif"></a>
@@ -133,32 +127,10 @@
 	    </div>
 	</div>
 </body>
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript">
 	$(document).on("pagebeforecreate",function(){
 		$("input").attr('data-role','none');
 		$("footer a,#loginpic,#content a").attr("rel","external");
 	});
 </script>
-<script>
-	$( document ).on( "pageinit", "body", function() {
-
-		$( document ).on( "swipeleft swiperight", "#page", function( e ) {
-			if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
-				if ( e.type === "swipeleft" ) {
-					$( "#right-panel" ).panel( "open" );
-				} else if ( e.type === "swiperight" ) {
-					$( "#left-panel" ).panel( "open" );
-				}
-			}
-		});
-		$('#menubtn').click(function(){
-				if ($('.ui-page-active').jqmData('panel')!=="open") {
-					$("#right-panel").panel("open");
-				};
-			});
-	});
-</script>	
-<script type="text/javascript" src="js/placeholder.js"></script>
 </html>

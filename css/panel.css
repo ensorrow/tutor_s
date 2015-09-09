@@ -2,7 +2,7 @@
 	padding: 0;
 	width: 100%;
 }
-#menubtn{
+#menubtn1{
 	display: block;
 	width: 29px;
 	height: 26px;
@@ -11,6 +11,18 @@
 	-o-background-size: 100%;
 	position: absolute;
 	right: 2em;
+	top: 50%;
+	margin-top: -10px;
+}
+#menubtn{
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/menu.gif);
+	-webkit-background-size: 100%;
+	-o-background-size: 100%;
+	position: absolute;
+	right: 1.2em;
 	top: 50%;
 	margin-top: -10px;
 }

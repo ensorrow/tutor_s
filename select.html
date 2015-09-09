@@ -7,90 +7,114 @@
 	<link rel="stylesheet" type="text/css" href="css/select.css">
 	<link rel="stylesheet" href="css/themes/jquery.mobile.flatui.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+	<script type="text/javascript" src="js/panel.js"></script>
 </head>
 <body>
-	<header data-role="header" id="myhead">
-		<a href="#" data-rel="back" data-icon="carat-l">后退</a>
-		<h1>购买课时</h1>
-	</header>
-	<form action="confirm.html" data-ajax="false">
-		<div id="sub_sel">
-			<input id="button11" type="checkbox" data-theme="c" data-mini="true"/>
-	        <label for="button11">大学物理<span class="price">￥120</span></label>
-	        <input id="button12" type="checkbox" data-theme="c" data-mini="true"/>
-	        <label for="button12">高等数学<span class="price">￥120</span></label>
-	         <input id="button13" type="checkbox" data-theme="c" data-mini="true"/>
-	        <label for="button13">高等数学<span class="price">￥120</span></label>
+	<div data-role="page" id="page">
+		<header data-role="header" id="myhead">
+			<a href="#" data-rel="back" data-icon="carat-l">后退</a>
+			<h1>购买课时</h1>
+			<a href="#right-panel" id="menubtn" data-role="none"></a>
+		</header>
+		<div data-role="content">
+			<form action="confirm.html" data-ajax="false">
+				<div id="sub_sel">
+					<input id="button11" type="checkbox" data-theme="c" data-mini="true"/>
+			        <label for="button11">大学物理<span class="price">￥120</span></label>
+			        <input id="button12" type="checkbox" data-theme="c" data-mini="true"/>
+			        <label for="button12">高等数学<span class="price">￥120</span></label>
+			         <input id="button13" type="checkbox" data-theme="c" data-mini="true"/>
+			        <label for="button13">高等数学<span class="price">￥120</span></label>
+				</div>
+				<div id="table">
+					<table>
+						<tbody>
+							<tr>
+								<th></th>
+								<th>上午</th>
+								<th>下午</th>
+								<th>晚上</th>
+							</tr>
+							<tr>
+								<td>周一</td>
+								<td class="tddisable"></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>周二</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>周三</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>周四</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>周五</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>周六</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>周日</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="last">
+					<select>
+						<option value="1">一周</option>
+						<option value="2">二周</option>
+						<option value="3">三周</option>
+						<option value="4">四周</option>
+						<option value="5">五周</option>
+					</select>
+				</div>
+				<div id="clear_fix"></div>
+				<footer>
+					<input type="submit" value="立即购买" id="button" data-role="none">
+					<p>总价：  <span>￥250</span></p>
+				</footer>
+			</form>
 		</div>
-		<div id="table">
-			<table>
-				<tbody>
-					<tr>
-						<th></th>
-						<th>上午</th>
-						<th>下午</th>
-						<th>晚上</th>
-					</tr>
-					<tr>
-						<td>周一</td>
-						<td class="tddisable"></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>周二</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>周三</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>周四</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>周五</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>周六</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>周日</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div id="last">
-			<select>
-				<option value="1">一周</option>
-				<option value="2">二周</option>
-				<option value="3">三周</option>
-				<option value="4">四周</option>
-				<option value="5">五周</option>
-			</select>
-		</div>
-		<div id="clear_fix"></div>
-		<footer>
-			<input type="submit" value="立即购买" id="button" data-role="none">
-			<p>总价：  <span>￥250</span></p>
-		</footer>
-	</form>
+		<div data-role="panel" id="right-panel" data-position-fixed="true" data-display="push" data-position="right">
+	    	<div id="panel_head">
+	    		<a href="#"><img src="images/headpic.gif"></a>
+	    	</div>
+	    	<div id="panel_nav">
+				<a href="login.html">登录</a>
+				<span>&nbsp/&nbsp</span>
+				<a href="register.html">注册</a>
+			</div>
+	    	<div>
+	    		<ul data-role="listview">
+	    			<li><a href="#">年级选择</a></li>
+	    			<li><a href="#">科目选择</a></li>
+	    			<li><a href="#">购物车</a></li>
+	    		</ul>
+	    	</div>
+	    </div>
+	</div>
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">

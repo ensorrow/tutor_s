@@ -122,7 +122,6 @@ footer{
 	line-height: 3em;
 	position: fixed;
 	bottom: 0;
-	padding-left: 1em;
 }
 footer span{
 	color: #ec6941;
@@ -151,4 +150,7 @@ footer #button{
 }
 .tddisable{
 	background: #eee;
+}
+#page .ui-content{
+	padding: 0;
 }

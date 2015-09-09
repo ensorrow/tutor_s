@@ -10,6 +10,17 @@ body{
 	font-size: 100%;
 	background: #f2f2f2;
 }
+#left_arrow{
+	display: block;
+	width: 13px;
+	height: 20.5px;
+	background: url(../images/back_cir.png) no-repeat rgba(0,0,0,0);
+	border: none;
+	-webkit-background-size: 100%;
+	-o-background-size: 100%;
+	left: 1em;
+	top: 1em;
+}
 #top_bg{
 	height: 10em;
 	width: 100%;
