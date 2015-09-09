@@ -32,19 +32,25 @@ header,nav,#content,#clear_fix{font-size: 68%;}
 	margin-top: -1.3em;
 }
 #search_box{
-	border:2px solid #fff;
-	border-top: 0;
+	border: 0;
+	border-radius: 3px;
 	height: 1.8em;
-	width: 10.8em;
+	width: 9.1em;
+	padding-left: 1.7em;
+	background: url(../images/search_w.png) #108ed0 .5em no-repeat;
+	background-size: 1em;
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	margin-left: -5.9em;
 	margin-top: -0.9em;
-	background-color: transparent;
 	font-size: 1.4em;
 	color: #fff;
 	outline: none;
+}
+#search_box::-webkit-input-placeholder {
+	color: #fff;
+	padding-left: 1.9em;
 }
 #plh{
 	position: absolute;
