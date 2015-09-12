@@ -29,7 +29,7 @@ header#myhead .ui-btn{
 	width: 10px;
 	position: absolute;
 	left: 26%;
-	border-left:2px solid #626262;
+	border-left:2px solid #ddd;
 }
 #main_wrapper li{
 	height: 100%;
