@@ -1,5 +1,5 @@
 .ui-panel-inner{
-	padding: 0;
+	padding: 0!important;
 	width: 100%;
 }
 #menubtn1{
@@ -13,6 +13,18 @@
 	right: 2em;
 	top: 50%;
 	margin-top: -13px;
+}
+#menubtn2{
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/menu.gif);
+	-webkit-background-size: 100%;
+	-o-background-size: 100%;
+	position: absolute;
+	right: 1.2em;
+	top: 50%;
+	margin-top: -25px;
 }
 #menubtn{
 	display: block;

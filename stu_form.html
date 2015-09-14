@@ -10,12 +10,13 @@
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/stu.css">
-	<link rel="stylesheet" type="text/css" href="css/navi.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
 </head>
 <body data-role="page">
 	<div data-role="header" id="myhead">
 		<a href="#" data-rel="back" data-icon="carat-l">后退</a>
 		<h1>用户详情</h1>
+		<a href="#right-panel" id="menubtn2" data-role="none"></a>
 		<div data-role="navbar" id="mynav">
 			<ul>
 				<li><a href="#" class="ui-btn-active">基本信息</a></li>
@@ -23,17 +24,36 @@
 			</ul>
 		</div>
 	</div>
-	<div class="stu_card">
-		<ul>
-			<li>用户名：<span>18292876059</span></li>
-			<li>性别：<span>男</span></li>
-			<li>学生类型：<span>理科生</span></li>
-			<li>目前所在学校：<span>西安市铁一中</span></li>
-			<li>目前所在年级：<span>高二</span></li>
-			<li>联系方式：<span>18292876059</span></li>
-			<li>家庭住址：<span>西安市碑林区西安交通大学仲英书院</span></li>
-		</ul>		
+	<div data-role="content">
+		<div class="stu_card">
+			<ul>
+				<li>用户名：<span>18292876059</span></li>
+				<li>性别：<span>男</span></li>
+				<li>学生类型：<span>理科生</span></li>
+				<li>目前所在学校：<span>西安市铁一中</span></li>
+				<li>目前所在年级：<span>高二</span></li>
+				<li>联系方式：<span>18292876059</span></li>
+				<li>家庭住址：<span>西安市碑林区西安交通大学仲英书院</span></li>
+			</ul>		
+		</div>
+		<a href="msg_edit.html" rel="external" data-role="button" class="mySub">修改信息</a>
 	</div>
-	<a href="msg_edit.html" rel="external" data-role="button" class="mySub">修改信息</a>
+	<div data-role="panel" id="right-panel" data-position-fixed="true" data-display="push" data-position="right">
+    	<div id="panel_head">
+    		<a href="#"><img src="images/headpic.gif"></a>
+    	</div>
+    	<div id="panel_nav">
+			<a href="login.html">登录</a>
+			<span>&nbsp/&nbsp</span>
+			<a href="register.html">注册</a>
+		</div>
+    	<div>
+    		<ul data-role="listview">
+    			<li><a href="#">年级选择</a></li>
+    			<li><a href="#">科目选择</a></li>
+    			<li><a href="#">购物车</a></li>
+    		</ul>
+    	</div>
+    </div>
 </body>
 </html>
