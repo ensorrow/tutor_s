@@ -2,7 +2,7 @@
 	color: #000;
 }
 #chart_wrap{
-	width: 90%;
+	width: 95%;
 	display: block;
 	margin: .5em auto 3em auto;
 }
@@ -58,7 +58,7 @@ li p{
 }
 .his_card{
 	overflow: visible;
-	width: 90%;
+	width: 95%;
 	padding: 1.6em 0 0 0;
 	position: relative;
 	margin:3.8em auto;
