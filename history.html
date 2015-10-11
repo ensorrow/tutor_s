@@ -17,17 +17,13 @@
 	<header data-role="header" id="myhead">
 		<a href="#" data-rel="back" data-icon="carat-l">后退</a>
 		<h1>历史信息</h1>
-		<a href="#right-panel" id="menubtn2" data-role="none"></a>
-		<div data-role="navbar" id="mynav">
-			<ul>
-				<li><a href="stu_form.html" rel="external">基本信息</a></li>
-				<li><a href="#" class="ui-btn-active">历史信息</a></li>
-			</ul>
-		</div>
+		<a href="#right-panel" id="menubtn" data-role="none"></a>
 	</header>
 	<div data-role="content">
-		<div id="chart_wrap">
-			<img src="images/chart.jpg">
+		<script type="text/javascript" src="js/ichart.1.2.min.js"></script>
+		<script type="text/javascript" src="js/chart.js"></script>
+		<div id="chart_wrap" class="his_card">
+			<div id='canvasDiv'></div>
 		</div>		
 		<ul class="his_card" id="cm0">
 			<li>
@@ -45,29 +41,29 @@
 		</ul>		
 		<ul data-inset="true" class="his_card" id="cm1">
 			<li>
-				<p class="user_name">李春雷</p>
+				<p class="user_name">李春雷：</p>
 				<p class="comments">老师讲的很好老师讲的很好老师讲的很好老师讲的很好</p>
 			</li>
 			<li>
-				<p class="user_name">吴飞胡</p>
+				<p class="user_name">吴飞胡：</p>
 				<p class="comments">老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好</p>
 			</li>
 			<li>
-				<p class="user_name">任佳伟</p>
+				<p class="user_name">任佳伟：</p>
 				<p class="comments">老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好</p>
 			</li>
 		</ul>		
 		<ul data-inset="true" class="his_card" id="cm2">
 			<li>
-				<p class="user_name">李春雷</p>
+				<p class="user_name">李春雷：</p>
 				<p class="comments">可造之才</p>
 			</li>
 			<li>
-				<p class="user_name">吴飞胡</p>
+				<p class="user_name">吴飞胡：</p>
 				<p class="comments">清北指日可待</p>
 			</li>
 			<li>
-				<p class="user_name">任佳伟</p>
+				<p class="user_name">任佳伟：</p>
 				<p class="comments">同济建筑学也很不错！</p>
 			</li>
 		</ul>
