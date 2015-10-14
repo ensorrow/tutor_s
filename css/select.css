@@ -195,39 +195,40 @@ td.unfinished{
 	width: 100%;
 	height: 100%;
 	z-index: 1000;	
-	display: flex;
-	display: -webkit-flex;
-	align-items: center;
-	justify-content: center;
-	-webkit-align-items: center;
-	-webkit-justify-content: center;
 }
 .content1 .alert_msg{
 	max-width: 70%;
 	padding: 1.2em 1em;
 	background-color: #fff;
+	margin: 0 auto;
+	position: relative;
+	top: 37%;
 	display: none;
 }
-.content1 #comment{
-	flex:1;
-	-webkit-flex: 1;
-}
-#comment{
-	display: -webkit-flex;
-	align-self: flex-end;
-	-webkit-align-self: flex-end;
+#comment{	
 	background: #d4d2d2;
 	padding: 0 10px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
 	display: none;
 }
+#comment:after{
+	content: '';
+	display: block;
+	clear: both;
+}
 #comment .ui-input-text{
-	-webkit-flex: 8;
+	float: left;
+	width: 78%;
 }
 #comment .ui-btn{
 	margin-left: 5px;
-	-webkit-flex: 1;
+	float: left;
 	background-color: #30aaea;
 	border: none;
+	width: 20%;
+	padding: 7px 10px;
 }
 .aui-list-view{
 	width: 90%;
