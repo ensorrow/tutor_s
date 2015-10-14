@@ -196,8 +196,11 @@ td.unfinished{
 	height: 100%;
 	z-index: 1000;	
 	display: flex;
+	display: -webkit-flex;
 	align-items: center;
 	justify-content: center;
+	-webkit-align-items: center;
+	-webkit-justify-content: center;
 }
 .content1 .alert_msg{
 	max-width: 70%;
@@ -207,20 +210,22 @@ td.unfinished{
 }
 .content1 #comment{
 	flex:1;
+	-webkit-flex: 1;
 }
 #comment{
-	display: flex;
+	display: -webkit-flex;
 	align-self: flex-end;
+	-webkit-align-self: flex-end;
 	background: #d4d2d2;
 	padding: 0 10px;
 	display: none;
 }
 #comment .ui-input-text{
-	flex: 8;
+	-webkit-flex: 8;
 }
 #comment .ui-btn{
 	margin-left: 5px;
-	flex: 1;
+	-webkit-flex: 1;
 	background-color: #30aaea;
 	border: none;
 }
