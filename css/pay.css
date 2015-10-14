@@ -1,0 +1,85 @@
+*{
+	margin:0;
+	padding: 0;
+	list-style: none;
+	font-family: YaHei;
+	font-size: 1em;
+}
+header#myhead{
+	background: #30aaea;
+	border: 0;
+}
+header#myhead .ui-btn{
+	background: rgba(0,0,0,0);
+	border: 0;
+}
+#sub_sel{
+	width: 90%;
+	padding: 1.6em 0;
+	position: relative;
+	margin:2.6em auto;
+	background: #fff;
+	text-align: center;
+	font-size: .68em;
+}
+#sub_sel::before{
+	content: '选择科目';
+	display: block;
+	width: 5em;
+	height:2.4em;
+	color: #fff;
+	text-align: center;
+	line-height: 2.4em;
+	background: #00b7ee;
+	position: absolute;
+	top: -1.2em;
+	left: -0.4em;
+}
+#sub_sel::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.ui-checkbox{
+	width: 46%;
+	float: left;
+}
+.ui-mini{margin: 0;}
+#table{
+	width: 90%;
+	background: #fff;
+	margin: 0 auto;
+	margin-top: 1.6em;
+	margin-bottom: 1.2em;
+	padding-bottom: 0.1em;
+	position: relative;
+	padding: 0.7em 0;
+	font-size: .68em;
+}
+table{
+	border-collapse: collapse;
+	width: 90%;
+	margin:1.2em auto;
+}
+table tr{
+	line-height: 1.9em;
+}
+table th,table td{
+	vertical-align: middle;
+	border: 1px solid #00675C;
+	text-align: center;
+}
+#table::before{
+	content: '选择时间';
+	display: block;
+	width: 5em;
+	height:2.4em;
+	color: #fff;
+	text-align: center;
+	line-height: 2.4em;
+	background: #00b7ee;
+	position: absolute;
+	top: -1.2em;
+	left: -0.4em;
+}
+

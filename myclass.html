@@ -1,149 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-	<title>已购课程</title>
-	<link rel="stylesheet" type="text/css" href="css/myclass.css">
-	<link rel="stylesheet" type="text/css" href="css/panel.css">
-	<link rel="stylesheet" href="css/themes/jquery.mobile.flatui.min.css" />
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>已购课程</title>
+    <link rel="stylesheet" type="text/css" href="css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="css/myclass.css">
+    <link rel="stylesheet" type="text/css" href="css/panel.css">
+    <link rel="stylesheet" href="css/themes/jquery.mobile.flatui.min.css" />
+    <link rel="stylesheet" href="css//jquery.mobile.structure-1.4.5.min.css">
 </head>
-<body data-role="page">
-	<header data-role="header" id="myhead">
-		<a href="#" data-rel="back" data-icon="carat-l">后退</a>
-		<h1>已购课程</h1>
-		<a href="#right-panel" id="menubtn" data-role="none"></a>
-	</header>
-	<div id="main_wrapper" data-role="content">
-		<div id="draw_line"></div>
-		<ul>
-			<li>
-				<div class="head_pic">
-					<a href="detail1.html" class="pic"></a>
-				</div>
-				<a class="class_info">
-					<h1>教师名称：<span>王树国</span><span class="deal_time">2015.7.29</span></h1>
-					<h2>课程名称：<span>大学物理</span> <span>x2</span></h2>
-					<h2>课程单价：<span>￥200</span></h2>
-					<h2>总价：<span>￥400</span></h2>					
-				</a>
-			</li>
-			<li>
-				<div class="head_pic">
-					<a href="detail1.html" class="pic"></a>
-				</div>
-				<a class="class_info">
-					<h1>教师名称：<span>王树国</span><span class="deal_time">2015.7.29</span></h1>
-					<h2>课程名称：<span>大学物理</span><span>x2</span></h2>
-					<h2>课程单价：<span>￥200</span></h2>
-					<h2>总价：<span>￥400</span></h2>
-				</a>
-			</li>
-			<li>
-				<div class="head_pic">
-					<a href="detail1.html" class="pic"></a>
-				</div>
-				<a class="class_info">
-					<h1>教师名称：<span>王树国</span><span class="deal_time">2015.7.29</span></h1>
-					<h2>课程名称：<span>大学物理</span><span>x2</span></h2>
-					<h2>课程单价：<span>￥200</span></h2>
-					<h2>总价：<span>￥400</span></h2>
-				</a>
-			</li>
-			<li>
-				<div class="head_pic">
-					<a href="detail1.html" class="pic"></a>
-				</div>
-				<a class="class_info">
-					<h1>教师名称：<span>王树国</span><span class="deal_time">2015.7.29</span></h1>
-					<h2>课程名称：<span>大学物理</span><span>x2</span></h2>
-					<h2>课程单价：<span>￥200</span></h2>
-					<h2>总价：<span>￥400</span></h2>
-				</a>
-			</li>
-			<li>
-				<div class="head_pic">
-					<a href="detail1.html" class="pic"></a>
-				</div>
-				<a class="class_info">
-					<h1>教师名称：<span>王树国</span><span class="deal_time">2015.7.29</span></h1>
-					<h2>课程名称：<span>大学物理</span> <span>x2</span></h2>
-					<h2>课程单价：<span>￥200</span></h2>
-					<h2>总价：<span>￥400</span></h2>					
-				</a>
-			</li>
-			<li>
-				<div class="head_pic">
-					<a href="detail1.html" class="pic"></a>
-				</div>
-				<a class="class_info">
-					<h1>教师名称：<span>王树国</span><span class="deal_time">2015.7.29</span></h1>
-					<h2>课程名称：<span>大学物理</span><span>x2</span></h2>
-					<h2>课程单价：<span>￥200</span></h2>
-					<h2>总价：<span>￥400</span></h2>
-				</a>
-			</li>
-		</ul>
-	</div>
-	<div data-role="panel" id="right-panel" data-position-fixed="true" data-display="push" data-position="right">
-    	<div id="panel_head">
-    		<a href="#"><img src="images/headpic.gif"></a>
-    	</div>
-    	<div id="panel_nav">
-			<a href="login.html">登录</a>
-			<span>&nbsp/&nbsp</span>
-			<a href="register.html">注册</a>
-		</div>
-    	<div>
-    		<ul data-role="listview">
-    			<li><a href="#">年级选择</a></li>
-    			<li><a href="#">科目选择</a></li>
-    			<li><a href="#">购物车</a></li>
-    		</ul>
-    	</div>
+<style>
+html { background: #f7f9f8;}
+</style>
+<body>
+    <header data-role="header" id="myhead">
+        <a href="#" data-rel="back" data-icon="carat-l">后退</a>
+        <h1>已购课程</h1>
+        <a href="#right-panel" id="menubtn" data-role="none"></a>
+    </header>
+    <div class="aui-content aui-card" data-role="content">
+        <ul class="aui-list-view">
+            <li class="aui-list-view-cell aui-img">
+                <img class="aui-img-object aui-pull-left" src="images/head_sam.gif">
+                <div class="aui-img-body">
+                    <h1>Name</h1>
+                    <h2>Date</h2>
+                    <h3>Price</h3>                    
+                </div>
+            </li>
+            <li class="aui-list-view-cell aui-img">
+                <img class="aui-img-object aui-pull-left" src="images/head_sam.gif">
+                <div class="aui-img-body">
+                    <h1>Name</h1>
+                    <h2>Date</h2>
+                    <h3>Price</h3>                    
+                </div>
+            </li>
+            <li class="aui-list-view-cell aui-img">
+                <img class="aui-img-object aui-pull-left" src="images/head_sam.gif">
+                <div class="aui-img-body">
+                    <h1>Name</h1>
+                    <h2>Date</h2>
+                    <h3>Price</h3>
+                    <!-- <p class='aui-ellipsis-2'>图文列表缩略图在左边的样式，默认大小为80PX，文字介绍内容可以为一行也可以为两行，超出部分自动省略</p> -->
+                </div>
+            </li>
+            <li class="aui-list-view-cell aui-img">
+                <img class="aui-img-object aui-pull-left" src="images/head_sam.gif">
+                <div class="aui-img-body">
+                    <h1>Name</h1>
+                    <h2>Date</h2>
+                    <h3>Price</h3>                    
+                </div>
+            </li>
+            <li class="aui-list-view-cell aui-img">
+                <img class="aui-img-object aui-pull-left" src="images/head_sam.gif">
+                <div class="aui-img-body">
+                    <h1>Name</h1>
+                    <h2>Date</h2>
+                    <h3>Price</h3>                    
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div data-role="panel" id="right-panel" data-position-fixed="true" data-display="push" data-position="right">
+        <div id="panel_head">
+            <a href="#"><img src="images/headpic.gif"></a>
+        </div>
+        <div id="panel_nav">
+            <a href="login.html">登录</a>
+            <span>&nbsp/&nbsp</span>
+            <a href="register.html">注册</a>
+        </div>
+        <div>
+            <ul data-role="listview">
+                <li><a href="#">年级选择</a></li>
+                <li><a href="#">科目选择</a></li>
+                <li><a href="#">购物车</a></li>
+            </ul>
+        </div>
     </div>
 </body>
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script type="text/javascript">
-	$(document).on("pagebeforecreate",function(){
-		$(".class_infoo,.pic").attr("rel","external");
-	});	
-</script>
-<script type="text/javascript">
-	var main=document.getElementById('main_wrapper');
-	var line=document.getElementById('draw_line');
-	var mainli=main.getElementsByTagName("li");
-	
-
-	function getElementsByClassName(n) {
-	    var classElements = [],allElements = document.getElementsByTagName('div');//所有div
-	    for (var i=0; i< allElements.length; i++ )
-		   {
-		       if (allElements[i].className == n ) {
-		           classElements[classElements.length] = allElements[i];
-		        }
-		   }
-		   return classElements;
-	}
-	var cla=getElementsByClassName("head_pic");
-
-	function draw_line(){
-		var hei=main.offsetHeight;
-		line.style.height=hei+'px';
-	}
-	function center(elem,obj){
-		var boxheight=elem.offsetHeight;
-		obj.style.height=boxheight+'px';
-		obj.style.lineHeight=boxheight+'px';
-	}
-	function autocen(){
-		for(var i=0;i<mainli.length;i++){
-			center(mainli[i],cla[i]);
-		}
-	}
-	draw_line();
-	autocen();
-</script>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
 </html>

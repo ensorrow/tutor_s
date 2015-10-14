@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+	<title>订单详情</title>
+	<link rel="stylesheet" type="text/css" href="css/select.css">
+	<link rel="stylesheet" type="text/css" href="css/aui.css">
+	<link rel="stylesheet" href="css/themes/jquery.mobile.flatui.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+</head>
+<body>
+	<div data-role="page" id="pay">
+		<header data-role="header" id="myhead">
+			<a href="#" data-rel="back" data-icon="carat-l">后退</a>
+			<h1>付款</h1>
+			<a href="#right-panel" id="menubtn" data-role="none"></a>
+		</header>
+		<div data-role="content">
+			<div id="table">
+				<section>
+					<p id="finished">已上课<span></span></p>
+					<p id="unfinished">未上课<span></span></p>
+				</section>
+				<table>
+					<tbody>
+						<tr>
+							<th></th>
+							<th>上午</th>
+							<th>下午</th>
+							<th>晚上</th>
+						</tr>
+						<tr>
+							<td>周一</td>
+							<td class="tddate finished tdactive"></td><!-- 默认选中 -->
+							<td class="tddate"></td>
+							<td class="tddate unfinished"></td>
+						</tr>
+						<tr>
+							<td>周二</td>
+							<td class="tddate"></td>
+							<td class="tddate"></td>
+							<td class="tddate"></td>
+						</tr>
+						<tr>
+							<td>周三</td>
+							<td class="tddate"></td>
+							<td class="tddate unfinished"></td>
+							<td class="tddate"></td>
+						</tr>
+						<tr>
+							<td>周四</td>
+							<td class="tddate unfinished"></td>
+							<td class="tddate"></td>
+							<td class="tddate"></td>
+						</tr>
+						<tr>
+							<td>周五</td>
+							<td class="tddate"></td>
+							<td class="tddate unfinished"></td>
+							<td class="tddate"></td>
+						</tr>
+						<tr>
+							<td>周六</td>
+							<td class="tddate"></td>
+							<td class="tddate"></td>
+							<td class="tddate"></td>
+						</tr>
+						<tr>
+							<td>周日</td>
+							<td class="tddate"></td>
+							<td class="tddate"></td>
+							<td class="tddate"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="aui-list-view">
+				<section class="aui-list-view-cell aui-img">
+					<img class="aui-img-object aui-pull-left" src="images/head_sam.gif">
+	                <div class="aui-img-body">
+	                    <h1>教师姓名：吕哲扬</h1>
+	                    <h2>下单时间：2015年10月5日</h2>
+	                    <h3>总价：300元</h3>                    
+	                </div>
+	            </section>
+			</div>
+			<div id="clear_fix"></div>
+			<footer>
+				<input type="submit" value="点击付款" id="button" data-role="none">
+				<p>总价：  <span>￥250</span></p>
+			</footer>
+			<div id="mask">
+				<div class="content1">
+					<p class="alert_msg">alert content</p>
+					<p id="comment">
+						<input type="text" placeholder="请认真评论哦~">
+						<input type="submit" value="提交" class="mySub">
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+$('.tddate').attr('date_sel',function () {
+	pa = $(this).parent();
+	var week = pa.parent().children().index(pa);
+	var time = $(this).index();
+	var result = week*3+time-3;
+	return result;
+})
+var usertype = 0;
+var schedule = new Array(21);
+$(".tddate").click(function(e) {
+		if ($(this).hasClass('tdselected')) {
+			alert('该时间已预订');
+			return -1;
+		}
+	if (usertype) {
+		if ($(this).hasClass('tddisable')) {
+			schedule[$(this).attr('date_sel')] = 0;
+		} else {
+			schedule[$(this).attr('date_sel')] = 2;
+		}
+		$(this).toggleClass('tddisable', !$(this).hasClass('tddisable'));	 
+	} else {
+		if ($(this).hasClass('tdpaying')) {
+			var ajaxpay = confirm('是否付款');
+			var ajaxnum = $(this).attr('date_sel');
+			var ajaxtid = $(this).text();
+			if (ajaxpay) {
+				ajaxpay++;
+			}
+			// console.log(ajaxpay);
+		    var ajaxUrl = "{:U('Stden/Schedule/payfor')}";
+		    var th = $(this);
+			$.ajax({
+				type: "POST",
+				url:  ajaxUrl,
+				data: {
+					'pay': ajaxpay,
+					'num': ajaxnum,
+					'tid': ajaxtid
+				},
+				success: function(data){
+							// console.log(data);
+					if (data == 1) {
+						alert('完成!');
+						var ajaxsscore = prompt('score');
+					    var ajaxsscoreUrl = "{:U('Stden/Schedule/sscoreto')}";
+					$.ajax({
+						type: "POST",
+						url:  ajaxsscoreUrl,
+						data: {
+							'sscore': ajaxsscore,
+							'num': ajaxnum,
+							'tid': ajaxtid
+						},success: function(data) {
+							alert('已score');
+						}
+					});
+
+					}
+					// console.log(data);
+					// console.log($(th));
+					$(th).toggleClass('tdpaying', false);	
+					$(th).toggleClass('tdpayed', ajaxpay == 2);	
+					$(th).toggleClass('tdunpay', ajaxpay == 0);	
+					var ajaxsword = prompt('payed');
+				    var ajaxswordUrl = "{:U('Stden/Schedule/swordto')}";
+					$.ajax({
+						type: "POST",
+						url:  ajaxswordUrl,
+						data: {
+							'sword': ajaxsword,
+							'num': ajaxnum,
+							'tid': ajaxtid
+						},success: function(data) {
+							console.log(data);
+							alert('已评论');
+						}
+					});
+				}
+
+			});
+		}
+
+	}
+})
+
+
+	var date1 = new Date();
+	var date2 = new Date();
+	date2.setTime(date1.getTime()+1000*60*60*24*6);
+	var ajaxid = "{$tid}";
+    var ajaxUrl = "{:U('Stden/Schedule/get_schedule')}";
+	$.ajax({
+		type: "POST",
+		url:  ajaxUrl,
+		data: {
+			'id': ajaxid,
+			'starttime': Date.parse(date1)/1000 ,
+			'endtime': Date.parse(date2)/1000 
+		},
+		success: function(data){                    
+			// console.log(data);
+
+			if (data != -1) {
+
+                    var data = JSON.parse(data);          
+					schedule = data['schedule'].split('');
+					$('.tddate').toggleClass('tdactive', false);
+					var k = 0;
+					schedule.map(
+						function (e, i) {
+							// console.log(i+' '+e);
+							
+							if (e == 7) {
+								$('[date_sel='+ i+']').toggleClass('tdpayed', true);
+							} else 
+							if (e == 6) {
+								$('[date_sel='+ i+']').toggleClass('tdpaying', true).text(data['data'][k]['tid']);
+								k++;
+							} else 
+							if (e == 5) {
+								$('[date_sel='+ i+']').toggleClass('tdunpay', true);
+							} else if (e == 4) {
+								$('[date_sel='+ i+']').toggleClass('tdselected', true);
+							} else if (e == 2) {
+								$('[date_sel='+ i+']').toggleClass('tddisable', true);
+							} else if ((e == 1) && usertype) {
+								$('[date_sel='+ i+']').toggleClass('tdactive', true);
+							}
+						}
+						);
+					
+                } else {
+                	alert('error');
+                }
+		}
+	});
+
+})
+
+</script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	$(document).on('pageinit',function(){
+		selectCourse();
+		addMask();		
+		$('#button').on('click',function(){submitCase();})		
+	})
+	function selectCourse(){
+		var i,j;
+		for(i=1;i<8;i++){
+			for(j=1;j<4;j++){
+				(function(value1,value2){
+					$('tr').eq(value1).children('td').eq(value2).click(function(){
+						if($(this).hasClass('finished')||$(this).hasClass('unfinished')){
+							if(!$(this).hasClass('tdactive')){
+								$(this).addClass('tdactive');
+							}
+							else{
+								$(this).removeClass('tdactive');
+							}
+						}
+					})
+				})(i,j);
+			}
+		}
+	}
+	function addMask(){
+		$('#mask').css('height',$(window).height())
+	}
+	function closeMask(obj){
+		$('#mask').click(function(e){
+			var target=e.target;
+			if(obj.get(0)!==target&&!$.contains(obj.get(0),target)){
+				$('#mask').hide();
+				obj.hide();
+			}
+		})
+	}
+	// closeMask($('.alert_msg'));若模拟alert框display：block，调用该函数
+	function closeComment(){		
+		$('#comment .mySub').click(function(){
+			var tmpmsg=$('#comment input[type=text]').val();
+			if(tmpmsg!=''){
+				$('#mask').hide();
+				$('#comment').hide();
+				// 请在此处获取评论内容
+			}
+		})
+	}
+	function submitCase(){		
+		var tf=$('.tdactive').length;
+		//判断是否正确，不正确则弹出alert框
+		if(tf){
+			$('#comment').css('display','flex');
+			closeComment();
+		}
+		else{
+			$('.alert_msg').show();
+			closeMask($('.alert_msg'));
+		}
+		$('#mask').show();
+	}	
+</script>
+</html>

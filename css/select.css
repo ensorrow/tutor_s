@@ -154,3 +154,80 @@ footer #button{
 #page .ui-content{
 	padding: 0;
 }
+/*pay.html*/
+#table section{
+	width: 90%;
+	margin: 0 auto;
+}
+#table p{
+	padding: 1em 0;
+	width: 50%;
+	float: left;
+}
+#table p span{
+	display: inline-block;
+	width: 50%;
+	height: 1em;
+	margin-left: 1.2em;
+}
+p#finished span{
+	background: #a7e3b7;
+}
+p#unfinished span{
+	background: #eee;
+}
+td.finished{
+	background: #a7e3b7;
+}
+td.unfinished{
+	background: #eee;
+}
+#mask{
+	background-color: rgba(0,0,0,0.3);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: none;
+}
+.content1{
+	width: 100%;
+	height: 100%;
+	z-index: 1000;	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.content1 .alert_msg{
+	max-width: 70%;
+	padding: 1.2em 1em;
+	background-color: #fff;
+	display: none;
+}
+.content1 #comment{
+	flex:1;
+}
+#comment{
+	display: flex;
+	align-self: flex-end;
+	background: #d4d2d2;
+	padding: 0 10px;
+	display: none;
+}
+#comment .ui-input-text{
+	flex: 8;
+}
+#comment .ui-btn{
+	margin-left: 5px;
+	flex: 1;
+	background-color: #30aaea;
+	border: none;
+}
+.aui-list-view{
+	width: 90%;
+	margin: 0 auto;
+}
+.aui-list-view h1,.aui-list-view h2,.aui-list-view h3{
+	font-size: 14px;
+}

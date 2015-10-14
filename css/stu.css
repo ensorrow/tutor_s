@@ -1,6 +1,9 @@
 #page .aui-form:before,#page .aui-form:after{
 	display: none;
 }
+#page .ui-panel-wrapper{
+	background-color: #fff;
+}
 #header_wra{
 	width: 100%;
 	height: 100px;

@@ -1,0 +1,16 @@
+#page{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+}
+#content img{
+	width: 50%;
+	margin: 3em auto 1em auto;
+}
+#content p{
+	font-size: 1.2em;
+}
+#content{
+	flex: 1;
+	text-align: center;
+}
