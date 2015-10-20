@@ -205,8 +205,17 @@ body{
 	overflow: scroll;
 	background: #f2f2f2;
 }
+#dialog .ui-icon-delete{
+	background: none;
+	border: none;
+}
 #dialog .ui-icon-delete:after{
 	background-image: url(../images/close.png);
+	background-size: 100%;
+	width: 26px;
+	height: 26px;
+	margin-top: -13px;
+	margin-left: -13px;
 }
 #dialog h1{
 	font-size: 18px;
@@ -250,7 +259,16 @@ body{
 	border-bottom: 1px solid #eee;
 	padding: 6px 0;
 }
-#dialog .ui-btn{
+#dialog #mySub{
+	text-align: center;
+	text-decoration: none;
+	margin: 6px auto;
+	width: 80%;
+	display: block;
 	background: #30aaea;
-	border: 0;
+	border:0;
+	border-radius: 5px;
+	color: #fff;
+	padding: 0.8em 0;
+	font-size: 0.8em;
 }
