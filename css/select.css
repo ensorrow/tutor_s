@@ -40,7 +40,7 @@ header#myhead .ui-btn{
 	display: block;
 	clear: both;
 }
-.ui-checkbox{
+.ui-radio{
 	width: 46%;
 	float: left;
 }
