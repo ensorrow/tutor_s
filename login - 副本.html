@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="css/login_regis.css">
+	<link rel="stylesheet" href="css/themes/jquery.mobile.flatui.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+</head>
+<body id="page">
+	<form id="loginform" role="main" class="ui-content">
+		<div id="input_wrapper">
+			<input type="text" id="username" name="username" placeholder="输入账号"><br>
+			<input type="password" id="password" name="password" placeholder="输入密码"><br>
+		</div>
+		<br>
+		<input type="submit" value="登录" id="login"><br>
+		<a href="register.html"  id="register2">快速注册</a>
+	</form>
+</body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	$(document).on("pagebeforecreate",function(){
+		$("input").attr('data-role','none');
+		$("footer a").attr("rel","external");		
+	});
+</script>
+<script type="text/javascript" src="js/panel.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/check.js"></script>
+</html>

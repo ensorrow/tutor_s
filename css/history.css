@@ -1,10 +1,18 @@
 .his_card{
 	color: #000;
 }
-#chart_wrap img{
-	max-width: 90%;
+#chart_wrap{
+	width: 95%;
 	display: block;
-	margin: 1em auto 3em auto;
+	margin: .5em auto 3em auto;
+}
+#canvasDiv{
+	overflow: scroll;
+}
+#chart_wrap:before{
+	content:'成绩曲线';
+	top: 0;
+	z-index: 2;
 }
 #teac_name{
 	padding: 0 0.5em;
@@ -21,6 +29,8 @@
 }
 #teac_name a{
 	color: #333;
+	padding: 4px 10px;
+	background: #eee;
 }
 li p{
 	margin: 0.4em;
@@ -48,10 +58,10 @@ li p{
 }
 .his_card{
 	overflow: visible;
-	width: 90%;
+	width: 95%;
 	padding: 1.6em 0 0 0;
 	position: relative;
-	margin:3em auto;
+	margin:3.8em auto;
 	background-color: #fff;
 	font-size: 80%;
 }
@@ -62,9 +72,20 @@ li p{
 	color: #fff;
 	text-align: center;
 	line-height: 2.6em;
-	background: #2C8DB3;
+	background: #30aaea;
 	position: absolute;
 	top: -1.6em;
+	border-radius: 6px 6px 0 0;
+}
+.his_card::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 12px;
+	background: #fff;
+	position: absolute;
+	bottom: -12px;
+	border-radius: 0 0 6px 6px;
 }
 #cm0::before{
 	content: '我的足迹';
@@ -88,6 +109,10 @@ li p{
 	border-color: #999;
 	border-bottom: 1px solid #eee;
 	padding-bottom: 0.7em;
+}
+.his_card li:last-child{
+	border-bottom: 0;
+	margin-bottom: 0;
 }
 .his_card li span{
 	color: #000;

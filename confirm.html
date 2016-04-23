@@ -8,41 +8,56 @@
 	<link rel="stylesheet" type="text/css" href="css/navi.css">
 	<link rel="stylesheet" href="css/themes/jquery.mobile.flatui.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+	<script type="text/javascript" src="js/panel.js"></script>
 </head>
 <body>
-	<header data-role="header">
-		<a href="#" data-rel="back" data-icon="carat-l">后退</a>
-		<h1>确认订单</h1>
-	</header>
-	<section>
-		<div>
-			<h2>支付信息</h2>
-			<ul>
-				<li>付款方式：<span>在线支付</span></li>			
-				<li>
-					所选课程：
+	<div data-role="page">
+		<header data-role="header" id="myhead">
+			<a href="#" data-rel="back" data-icon="carat-l">后退</a>
+			<h1>确认订单</h1>
+			<a href="#right-panel" id="menubtn" data-role="none"></a>
+		</header>
+		<div data-role="content">
+			<section>
+				<div>
+					<h2>支付信息</h2>
 					<ul>
-						<li><span>大学物理（￥120）x1</span></li>
-						<li><span>高等数学（￥150）x2</span></li>
-						<li><span>大学英语（￥100）x1</span></li>
-					</ul>
-				</li>
-				<li>累计金额：<span>￥520</span></li>
-				<li>优惠券：<span>￥20</span></li>
-				<li>应付金额：<span>￥500</span></li>
-			</ul>			
+						<li>付款方式：<span>在线支付</span></li>			
+						<li>
+							所选课程：
+							<ul>
+								<li><span>大学物理（￥120）x1</span></li>
+								<li><span>高等数学（￥150）x2</span></li>
+								<li><span>大学英语（￥100）x1</span></li>
+							</ul>
+						</li>
+						<li>累计金额：<span>￥520</span></li>
+						<li>优惠券：<span>￥20</span></li>
+						<li>应付金额：<span>￥500</span></li>
+					</ul>			
+				</div>
+			</section>
+			<input type="button" value="提交订单" style="font-size:.8em;" data-role="none">
 		</div>
-	</section>
-	<input type="button" value="提交订单" style="font-size:.8em;" data-role="none">
-	<div id="footer_fix"></div>
-	<footer>
-		<ul>
-			<li class="nav_active"><a href="list1.html" id="nav_btn1" rel="external">首页</a></li>
-			<li><a href="myclass.html" id="nav_btn2" rel="external">已购课程</a></li>
-			<li><a href="stu_form.html" id="nav_btn3" rel="external">我的</a></li>
-			<div style="clear:both;"></div>
-		</ul>
-	</footer>
+		<div data-role="panel" id="right-panel" data-position-fixed="true" data-display="push" data-position="right">
+	    	<div id="panel_head">
+	    		<a href="#"><img src="images/headpic.gif"></a>
+	    	</div>
+	    	<div id="panel_nav">
+				<a href="login.html">登录</a>
+				<span>&nbsp/&nbsp</span>
+				<a href="register.html">注册</a>
+			</div>
+	    	<div>
+	    		<ul data-role="listview">
+	    			<li><a href="#">年级选择</a></li>
+	    			<li><a href="#">科目选择</a></li>
+	    			<li><a href="#">购物车</a></li>
+	    		</ul>
+	    	</div>
+	    </div>
+	</div>
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>

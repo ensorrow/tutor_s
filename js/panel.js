@@ -1,4 +1,4 @@
-$(document).on("pageinit","body",function(){
+$(document).on('pageinit',function(){
 	$( document ).on( "swipeleft swiperight", "body", function( e ) {
 	if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
 		if ( e.type === "swipeleft" ) {
@@ -8,10 +8,6 @@ $(document).on("pageinit","body",function(){
 		}
 	}
 	});
-	$('#menubtn').click(function(){
-		if ($('.ui-page-active').jqmData('panel')!=="open") {
-			$("#right-panel").panel("open");
-		};
-	});
-});
+	$('#right-panel').panel();
+})
 	

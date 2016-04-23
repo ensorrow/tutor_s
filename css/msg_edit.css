@@ -20,7 +20,7 @@ label{
 	color: #fff;
 	text-align: center;
 	line-height: 2.6em;
-	background: #2C8DB3;
+	background: #30aaea;
 	position: absolute;
 	top: -1.6em;
 }
@@ -46,4 +46,7 @@ option{
 .ui-select>div>span{
 	color: #fff;
 	font-size: 80%;
+}
+.ui-page-theme-b #content .ui-btn{
+	background: #1897d9!important;
 }

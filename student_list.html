@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>教师申请</title>
+</head>
+<body>
+<form action="{:U(Index/student_list)}" method="post" enctype="multipart/form-data">
+  		<input type="file" name="files[]"/>
+  		<input type="file" name="files[]"/>
+		<br>
+		<input type="text" name="name" placeholder="姓名" >
+		<br>
+		男<input type="radio" name="gender" value="1">
+		女<input type="radio" name="gender" value="2">
+		<br>
+		<input type="text" name="phone" placeholder="联系方式：" >
+		<input type="text" name="live" placeholder="家庭住址：" >
+		<br>
+		理科<input type="radio" name="science" value="1">
+		文科<input type="radio" name="science" value="2">
+		<br>
+		<br>
+		在读（毕业）院校：<input type="text" name="std_sch">
+		<input type="text" name="sintro" placeholder="自身评价" >
+		<input type="text" name="tintro" placeholder="教师要求" >
+		<br>
+		<br>
+		小学<input type="radio" name="rank" value="1">
+		初中<input type="radio" name="rank" value="2">
+		高中<input type="radio" name="rank" value="3">
+		<br>
+		<!-- 勾选小学，初中，高中分别显示对应列表 -->
+		<file/>
+		<input type="submit">
+	</form>
+	{$error}
+	<br>
+</body>
+
+
+</html>

@@ -1,35 +1,95 @@
-.stu_card{
-	overflow: visible;
-	width: 90%;
-	padding: 1.6em 0 1em 0;
-	position: relative;
-	margin:3em auto;
-	background-color: #fff;
-	font-size: 80%;
+#page .aui-form:before,#page .aui-form:after{
+	display: none;
 }
-.stu_card::before{
-	content: '个人信息';
-	display: block;
+#page .ui-panel-wrapper{
+	background-color: #fff;
+}
+#header_wra{
 	width: 100%;
-	height:2.6em;
+	height: 100px;
+	background: #1abc9c;
+}
+.my-gridc1{
+	width: 36%;
+	text-align: center;
+	float: left;
+}
+.my-gridc2{
+	width: 64%;
+	float: left;
+}
+.cir_img_wrapper{
+	display: block;
+	width: 70px;
+	height: 70px;
+	border: 5px solid #ebeaea;
+	border-radius: 50px;
+	margin: 14px auto;
+	box-shadow: 0 0 3px #999;
+	position: relative;
+	z-index: 1;
+}
+.cir_img_wrapper img{
+	width: 100%;
+}
+#header_wra hgroup{
+	padding-top: 15px;
+}
+#header_wra h1,#header_wra h2{
+	color: #eee;
+	font-size: 16px;
+	line-height: 1.9em;
+}
+#header_wra hgroup span{
 	color: #fff;
+}
+#page .ui-content{
+	padding: 0;
+}
+#page .mySub{
+	width: 80%;
+	margin: 20px auto;
+	padding: 7.5px 0;
+}
+/*mask*/
+#mask{
+	background-color: rgba(0,0,0,0.3);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: none;
+}
+.content1{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 1000;
+	background-color: #fff;
+}
+.radio_form li{
+	height: 2.6em;
+	font-size: 1.2em;
+	border-bottom: 1px solid #ddd;
 	text-align: center;
 	line-height: 2.6em;
-	background: #2C8DB3;
+	position: relative;
+}
+.radio_form li input[type=radio]{
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
 	position: absolute;
-	top: -1.6em;
+	opacity: 0;
 }
-.stu_card ul{
-	list-style: none;
-	padding: 0;
-	margin: 0;
+.content1 ul{
+	display: none;
 }
-.stu_card li{
-	margin: 0.7em 1.4em;
-	border-color: #999;
-	border-bottom: 1px solid #eee;
-	padding-bottom: 0.7em;
+.content1 li.active{
+	background-color: #eee;
 }
-.stu_card li span{
-	color: #000;
+.freeze{
+	overflow: hidden;
 }

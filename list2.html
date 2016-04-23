@@ -5,121 +5,131 @@
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 	<title>教师列表</title>
 	<link rel="stylesheet" type="text/css" href="css/style_list.css">
-	<link rel="stylesheet" type="text/css" href="css/navi.css">
 	<link rel="stylesheet" href="css/themes/jquery.mobile.flatui.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/panel.js"></script>	
+	<script type="text/javascript" src="js/placeholder.js"></script>
 </head>
 <body>
-	<header>
-		<img src="images/left_arrow.gif" id="left_arrow">
-		<input type="text" id="search_box">
-		<span id="plh">搜索老师</span>
-		<a href="login.html" id="loginpic"></a>
-	</header>
-	<div id="clear_fix"></div>
-	<nav>
-		<ul>
-			<li><a href="list1.html">家教</a></li>
-			<li><a href="list2.html" class="active">大小班</a></li>
-			<div style="clear:both;"></div>
-		</ul>
-	</nav>
-	<div id="content">
-		<ul>
-			<a href="detail1.html">
-				<li>
-					<div class="headpic"><img src="images/headpic_1.gif"></div>
-					<hgroup>
-						<h1 class="ac">Kristal</h1>
-						<input type="button" value="预约" class="btn">
-						<div class="rank rank1"><img src="images/rank5.gif"></div>
-						<h2>
-							授课时长：<span id="time1">120</span>小时
-						</h2>
-						<h4><span>30</span>元/小时</h4>
-						<h3>西安交通大学</h3>	
-					</hgroup>	
-				</li>
-			</a>
-			<a href="detail1.html">
-				<li>
-					<div class="headpic"><img src="images/headpic_1.gif"></div>
-					<hgroup>
-						<h1>Kristal</h1>
-						<input type="button" value="预约" class="btn">
-						<div class="rank rank1"><img src="images/rank5.gif"></div>
-						<h2>
-							授课时长：<span id="time1">120</span>小时
-						</h2>
-						<h4><span>30</span>元/小时</h4>
-						<h3>西安交通大学</h3>	
-					</hgroup>	
-				</li>
-			</a>
-			<a href="detail1.html">
-				<li>
-					<div class="headpic"><img src="images/headpic_1.gif"></div>
-					<hgroup>
-						<h1 class="ac">Kristal</h1>
-						<input type="button" value="预约" class="btn">
-						<div class="rank rank5"><img src="images/rank5.gif"></div>
-						<h2>
-							授课时长：<span id="time1">120</span>小时
-						</h2>
-						<h4><span>30</span>元/小时</h4>
-						<h3>西安交通大学</h3>	
-					</hgroup>	
-				</li>
-			</a>
-			<a href="detail1.html">
-				<li>
-					<div class="headpic"><img src="images/headpic_1.gif"></div>
-					<hgroup>
-						<h1>Kristal</h1>
-						<input type="button" value="预约" class="btn">
-						<div class="rank rank2"><img src="images/rank5.gif"></div>
-						<h2>
-							授课时长：<span id="time1">120</span>小时
-						</h2>
-						<h4><span>30</span>元/小时</h4>
-						<h3>西安交通大学</h3>	
-					</hgroup>	
-				</li>
-			</a>
-			<a href="detail1.html">
-				<li>
-					<div class="headpic"><img src="images/headpic_1.gif"></div>
-					<hgroup>
-						<h1 class="ac">Kristal</h1>
-						<input type="button" value="预约" class="btn">
-						<div class="rank rank3"><img src="images/rank5.gif"></div>
-						<h2>
-							授课时长：<span id="time1">120</span>小时
-						</h2>
-						<h4><span>30</span>元/小时</h4>
-						<h3>西安交通大学</h3>	
-					</hgroup>	
-				</li>
-			</a>
-		</ul>
+	<div data-role="page" id="page">
+		<header>
+			<a href="#" data-rel="back" id="left_arrow"></a>
+			<input type="text" id="search_box" placeholder="搜索教师">
+			<a href="#right-panel" id="menubtn1"></a>
+		</header>
+		<div id="clear_fix"></div>
+		<nav>
+			<ul>
+				<li><a href="list1.html">家教</a></li>
+				<li><a href="list2.html" class="active">大小班</a></li>
+				<div style="clear:both;"></div>
+			</ul>
+		</nav>
+		<div id="content">
+			<ul>
+				<a href="detail1.html">
+					<li>
+						<div class="headpic"><img src="images/headpic_1.gif"></div>
+						<hgroup>
+							<h1 class="ac">Kristal</h1>
+							<input type="button" value="预约" class="btn">
+							<div class="rank rank1"><img src="images/rank5.gif"></div>
+							<h2>
+								授课时长：<span id="time1">120</span>小时
+							</h2>
+							<h4><span>30</span>元/小时</h4>
+							<h3>西安交通大学</h3>	
+						</hgroup>	
+					</li>
+				</a>
+				<a href="detail1.html">
+					<li>
+						<div class="headpic"><img src="images/headpic_1.gif"></div>
+						<hgroup>
+							<h1>Kristal</h1>
+							<input type="button" value="预约" class="btn">
+							<div class="rank rank1"><img src="images/rank5.gif"></div>
+							<h2>
+								授课时长：<span id="time1">120</span>小时
+							</h2>
+							<h4><span>30</span>元/小时</h4>
+							<h3>西安交通大学</h3>	
+						</hgroup>	
+					</li>
+				</a>
+				<a href="detail1.html">
+					<li>
+						<div class="headpic"><img src="images/headpic_1.gif"></div>
+						<hgroup>
+							<h1 class="ac">Kristal</h1>
+							<input type="button" value="预约" class="btn">
+							<div class="rank rank5"><img src="images/rank5.gif"></div>
+							<h2>
+								授课时长：<span id="time1">120</span>小时
+							</h2>
+							<h4><span>30</span>元/小时</h4>
+							<h3>西安交通大学</h3>	
+						</hgroup>	
+					</li>
+				</a>
+				<a href="detail1.html">
+					<li>
+						<div class="headpic"><img src="images/headpic_1.gif"></div>
+						<hgroup>
+							<h1>Kristal</h1>
+							<input type="button" value="预约" class="btn">
+							<div class="rank rank2"><img src="images/rank5.gif"></div>
+							<h2>
+								授课时长：<span id="time1">120</span>小时
+							</h2>
+							<h4><span>30</span>元/小时</h4>
+							<h3>西安交通大学</h3>	
+						</hgroup>	
+					</li>
+				</a>
+				<a href="detail1.html">
+					<li>
+						<div class="headpic"><img src="images/headpic_1.gif"></div>
+						<hgroup>
+							<h1 class="ac">Kristal</h1>
+							<input type="button" value="预约" class="btn">
+							<div class="rank rank3"><img src="images/rank5.gif"></div>
+							<h2>
+								授课时长：<span id="time1">120</span>小时
+							</h2>
+							<h4><span>30</span>元/小时</h4>
+							<h3>西安交通大学</h3>	
+						</hgroup>	
+					</li>
+				</a>
+			</ul>
+		</div>
+		<div data-role="panel" id="right-panel" data-position-fixed="true" data-display="push" data-position="right">
+	    	<div id="panel_head">
+	    		<a href="#"><img src="images/headpic.gif"></a>
+	    	</div>
+	    	<div id="panel_nav">
+				<a href="login.html">登录</a>
+				<span>&nbsp/&nbsp</span>
+				<a href="register.html">注册</a>
+			</div>
+	    	<div>
+	    		<ul data-role="listview">
+	    			<li><a href="#">年级选择</a></li>
+	    			<li><a href="#">科目选择</a></li>
+	    			<li><a href="#">购物车</a></li>
+	    		</ul>
+	    	</div>
+	    </div>
 	</div>
-	<div id="footer_fix"></div>
-	<footer>
-		<ul>
-			<li class="nav_active"><a href="list1.html" id="nav_btn1" rel="external">首页</a></li>
-			<li><a href="myclass.html" id="nav_btn2" rel="external">已购课程</a></li>
-			<li><a href="stu_form.html" id="nav_btn3" rel="external">我的</a></li>
-			<div style="clear:both;"></div>
-		</ul>
-	</footer>
 </body>
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript">
 	$(document).on("pagebeforecreate",function(){
 		$("input").attr('data-role','none');
 		$("footer a,#loginpic,#content a").attr("rel","external");
 	});
-</script>	
-<script type="text/javascript" src="js/placeholder.js"></script>
+</script>
 </html>

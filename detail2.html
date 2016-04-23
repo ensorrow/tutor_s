@@ -7,9 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="css/detail.css">
 	<link rel="stylesheet" type="text/css" href="css/detail1.css">
 	<link rel="stylesheet" type="text/css" href="css/detail2.css">
-	<link rel="stylesheet" type="text/css" href="css/navi.css">
+	<link rel="stylesheet" href="css/themes/jquery.mobile.flatui.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
 </head>
 <body>
+	<div data-role="header">
+		<a href="#" data-rel="back" id="left_arrow"></a>
+	</div>
 	<div id="top_bg"></div>
 	<header>
 		<div id="l_wr">
@@ -39,28 +43,28 @@
 		<div id="draw_line"></div>
 		<ul>
 			<li>
-				<div class="comment_time">2015.3.16</div>
+				<div class="comment_time"><span>2015.3.16</span></div>
 				<div class="comments">
 					<p>老师讲的很好老师讲的很好老师讲的很好老师讲的很好</p>
 					<p class="user_name">用户：<span>刘家璇</span></p>
 				</div>
 			</li>
 			<li>
-				<div class="comment_time">2015.3.16</div>
+				<div class="comment_time"><span>2015.3.16</span></div>
 				<div class="comments">
 					<p>老师讲的很好老师讲的很好老师讲的很好老师讲的很好</p>
 					<p class="user_name">用户：<span>刘家璇</span></p>
 				</div>
 			</li>
 			<li>
-				<div class="comment_time">2015.12.7</div>
+				<div class="comment_time"><span>2015.12.7</span></div>
 				<div class="comments">
 					<p>老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好</p>
 					<p class="user_name">用户：<span>刘家璇</span></p>
 				</div>
 			</li>
 			<li>
-				<div class="comment_time">2015.12.30</div>
+				<div class="comment_time"><span>2015.12.30</span></div>
 				<div class="comments">
 					<p>老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好老师讲的很好</p>
 					<p class="user_name">用户：<span>刘家璇</span></p>
@@ -68,15 +72,6 @@
 			</li>
 		</ul>
 	</div>
-	<div id="footer_fix"></div>
-	<footer>
-		<ul>
-			<li class="nav_active"><a href="list1.html" id="nav_btn1" rel="external">首页</a></li>
-			<li><a href="myclass.html" id="nav_btn2" rel="external">已购课程</a></li>
-			<li><a href="stu_form.html" id="nav_btn3" rel="external">我的</a></li>
-			<div style="clear:both;"></div>
-		</ul>
-	</footer>
 	<a href="select.html" id="float_button" rel="external">预约</a>
 </body>
 <script type="text/javascript">
@@ -114,4 +109,10 @@
 	draw_line();
 	autocen();
 </script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	$("input").attr('data-role','none');
+	$("nav a").css("color","#fff");
+</script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </html>

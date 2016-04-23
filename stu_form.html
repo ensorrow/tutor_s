@@ -5,44 +5,164 @@
 	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
 	<title>学生详情</title>
 	<link rel="stylesheet" href="css/themes/jquery.mobile.flatui.min.css" />
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/stu.css">
-	<link rel="stylesheet" type="text/css" href="css/navi.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+	<link rel="stylesheet" type="text/css" href="css/aui.css">
 </head>
-<body data-role="page">
-	<div data-role="header">
+<body data-role="page" id="page">
+	<div data-role="header" id="myhead">
 		<a href="#" data-rel="back" data-icon="carat-l">后退</a>
 		<h1>用户详情</h1>
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#" class="ui-btn-active">基本信息</a></li>
-				<li><a href="history.html" rel="external">历史信息</a></li>
-			</ul>
+		<a href="#right-panel" id="menubtn" data-role="none"></a>
+	</div>
+	<div data-role="content">
+		<div id="header_wra" class="my-grid">
+			<div class="my-gridc1">
+				<div class="cir_img_wrapper"><img src="images/head_sam.gif"></div>
+			</div>
+			<hgroup class="my-gridc2">
+				<h1>用户名：18292876059</h1>
+				<h2>等级：Lv3</h2>
+			</hgroup>
 		</div>
+		<form>
+			<ul class="aui-form">
+				<li class="aui-input-row">
+					<label class="aui-input-addon">姓名：</label>
+            		<input type="text" class="aui-input" value="吕哲扬"/>
+				</li>
+				<li class="aui-input-row radioimi">
+					<label class="aui-input-addon">性别：</label>
+            		<input type="text" class="aui-input" value="男" disabled/>
+				</li>
+				<li class="aui-input-row radioimi">
+					<label class="aui-input-addon">学生类型：</label>
+            		<input type="text" class="aui-input" value="理科生" disabled/>
+				</li>
+				<li class="aui-input-row radioimi">
+					<label class="aui-input-addon">年级：</label>
+            		<input type="text" class="aui-input" value="高中" disabled/>
+				</li>
+				<li class="aui-input-row">
+					<label class="aui-input-addon">目前所在学校：</label>
+            		<input type="text" class="aui-input" value="西安市铁一中" />
+				</li>
+				<li class="aui-input-row">
+					<label class="aui-input-addon">目前所在年级：</label>
+            		<input type="text" class="aui-input" value="高二" />
+				</li>
+				<li class="aui-input-row">
+					<label class="aui-input-addon">联系方式：</label>
+            		<input type="text" class="aui-input" value="18292876059" />
+				</li>
+				<li class="aui-input-row">
+					<label class="aui-input-addon">家庭住址：</label>
+            		<input type="text" class="aui-input" value="西安市碑林区西安交通大学仲英书院" />
+				</li>
+				<li class="aui-input-row">
+					<label class="aui-input-addon">自身评价：</label>
+            		<textarea class="aui-input" wrap="virtual">我是一头小毛驴我从来也不骑~</textarea>
+				</li>
+				<li class="aui-input-row">
+					<label class="aui-input-addon">教师要求：</label>
+            		<textarea class="aui-input" wrap="virtual">长得帅，收费低，水平高</textarea>
+				</li>
+				<input type="submit" value="确认修改" class="aui-btn aui-btn-primary aui-btn-block mySub">
+			</ul>		
+		
+		<div id="mask">
+			<div class="content1">
+				<ul class="radio_form">
+					<li>男
+						<input type="radio" value="0">
+					</li>
+					<li>女
+						<input type="radio" value="1">
+					</li>
+				</ul>
+				<ul class="radio_form">
+					<li>理科生
+					<input type="radio" value="3"></li>
+					<li>文科生
+					<input type="radio" value="4"></li>
+					<li>统招生
+					<input type="radio" value="4"></li>
+				</ul>
+				<ul class="radio_form">
+					<li>小学
+					<input type="radio" value="5"></li>
+					<li>初中
+					<input type="radio" value="6"></li>
+					<li>高中
+					<input type="radio" value="7"></li>
+				</ul>
+			</div>
+		</div>
+		</form>
 	</div>
-	<div class="stu_card">
-		<ul>
-			<li>用户名：<span>18292876059</span></li>
-			<li>性别：<span>男</span></li>
-			<li>学生类型：<span>理科生</span></li>
-			<li>目前所在学校：<span>西安市铁一中</span></li>
-			<li>目前所在年级：<span>高二</span></li>
-			<li>联系方式：<span>18292876059</span></li>
-			<li>家庭住址：<span>西安市碑林区西安交通大学仲英书院</span></li>
-		</ul>		
-	</div>
-	<a href="msg_edit.html" rel="external" data-role="button" class="mySub">修改信息</a>
-	<div id="footer_fix"></div>
-	<footer>
-		<ul>
-			<li><a href="list1.html" id="nav_btn1" rel="external">首页</a></li>
-			<li><a href="myclass.html" id="nav_btn2" rel="external">已购课程</a></li>
-			<li class="nav_active"><a href="stu_form.html" id="nav_btn3" rel="external">我的</a></li>
-			<div style="clear:both;"></div>
-		</ul>
-	</footer>
+	<div data-role="panel" id="right-panel" data-position-fixed="true" data-display="push" data-position="right">
+    	<div id="panel_head">
+    		<a href="#"><img src="images/headpic.gif"></a>
+    	</div>
+    	<div id="panel_nav">
+			<a href="login.html">登录</a>
+			<span>&nbsp/&nbsp</span>
+			<a href="register.html">注册</a>
+		</div>
+    	<div>
+    		<ul data-role="listview">
+    			<li><a href="#">年级选择</a></li>
+    			<li><a href="#">科目选择</a></li>
+    			<li><a href="#">购物车</a></li>
+    		</ul>
+    	</div>
+    </div>
 </body>
+<script type="text/javascript">
+	$(document).on('pagebeforecreate',function(){
+		$('input').attr('data-role','none');
+	});
+	$(document).on('pageinit',function(){
+		$('#mask').css('height',$(document).height()+'px');		
+	})
+	function mob_hover(){
+		$('.content1 li').touchstart(function(){
+			$(this).addClass('active');
+		});
+		$('.content1 li').touchend(function(){
+			$(this).removeClass('active');
+		});
+	}
+	function radio_imi(){
+		for(var i=0;i<3;i++){
+			(function(num){
+				$('.radioimi').eq(num).click(function(event){
+					event.preventDefault();
+					$('#mask').show();
+					$('.radio_form').eq(num).show();
+					$(this).addClass('special');
+					$('body').addClass('freeze');
+					return false;			
+				});
+			})(i);
+		}
+		
+		$('.radio_form li').click(function(){
+			var tmpmsg=$(this).text();
+			$('#mask').hide();
+			$('.content1 ul').hide();
+			$('.special input').val(tmpmsg);
+			$('.special').removeClass('special')
+			$('body').removeClass('freeze');
+		})
+	}
+	   
+	mob_hover();
+	radio_imi();
+	
+</script>
 </html>
