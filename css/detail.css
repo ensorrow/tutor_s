@@ -43,6 +43,7 @@ body{
 	margin-bottom: 1em;
 	position: relative;
 	z-index: 3;
+	border-radius: 50%;
 }
 header{
 	height: 7.3em;

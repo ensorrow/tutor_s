@@ -111,6 +111,7 @@ a,a:visited{
 }
 .headpic img{
 	width: 6em;
+	border-radius: 50%;
 }
 .btn{
 	border:0;
